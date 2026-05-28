@@ -5,7 +5,7 @@ const multer = require("multer");
 const postModel = require("./models/post.model");
 const cors = require("cors");
 app.use(
-  cors({ origin: "https://project-dam-digital-asset-managemen.vercel.app/" }),
+  cors({ origin: "https://project-dam-digital-asset-managemen.vercel.app" }),
 );
 app.use(express.json());
 
