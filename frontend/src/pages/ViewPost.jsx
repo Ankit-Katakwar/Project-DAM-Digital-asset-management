@@ -21,7 +21,7 @@ const ViewPost = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6">
+    <div className="min-h-screen w-full bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 p-6">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
@@ -41,7 +41,7 @@ const ViewPost = () => {
                   key={post._id}
                   className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-300 hover:border-white/20 hover:bg-white/10"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-800">
+                  <div className="relative aspect-4/3 overflow-hidden bg-slate-800">
                     <img
                       src={post.image}
                       alt="post"
