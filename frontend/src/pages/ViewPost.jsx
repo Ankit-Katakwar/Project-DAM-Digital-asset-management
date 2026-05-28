@@ -15,10 +15,10 @@ const ViewPost = () => {
  
 
   useEffect(() => {
-    axios.get("http://localhost:3000/view-post").then((res) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/view-post`).then((res) => {
       setPosts(res.data.data);
     });
-  }, [posts]);
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6">

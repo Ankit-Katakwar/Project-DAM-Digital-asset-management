@@ -4,7 +4,9 @@ const fileUpload = require("./services/storage.services");
 const multer = require("multer");
 const postModel = require("./models/post.model");
 const cors = require("cors");
-app.use(cors());
+app.use(
+  cors({ origin: "https://project-dam-digital-asset-managemen.vercel.app/" }),
+);
 app.use(express.json());
 
 const upload = multer({ storage: multer.memoryStorage() });
@@ -23,6 +25,9 @@ app.post("/create-post", upload.single("image"), async (req, res) => {
   res.status(201).json({
     message: "File uploaded.",
   });
+});
+app.get("/", (req, res) => {
+  res.json({ message: "Server is running." });
 });
 
 app.get("/view-post", async (req, res) => {

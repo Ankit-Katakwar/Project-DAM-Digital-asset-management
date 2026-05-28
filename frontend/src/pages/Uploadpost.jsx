@@ -4,7 +4,7 @@ const Uploadpost = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     await axios
-      .post("http://localhost:3000/create-post", formData)
+      .post(`${import.meta.env.VITE_API_URL}/create-post`, formData)
       .then((res) => {
         alert("The picture is uploaded.");
         e.target.reset();
